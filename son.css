@@ -1,0 +1,173 @@
+*{
+	margin:0;
+	padding:0;
+}
+html , body{
+	// padding: 0;
+	// margin: 0;
+	background: #222;
+	 overflow-x: hidden;
+    // overflow-y: hidden; 
+}
+#basliq{
+	float: left;
+	margin-left: 105px;
+    margin-top: 10px;
+}
+#basliq h1{
+	color: #ccc;
+	font-size: 60px;
+	text-shadow: 1px 1px 1px #ccc;
+	font-weight: bold;
+}
+#basliq p{
+	color: #333;
+	font-size: 20px;
+	text-shadow: 1px 1px 1px  #333;
+}
+#orta{
+	width: 100%;
+	height: 430px;
+	border-top:7px solid #333;
+	border-bottom:7px solid #333;
+	// overflow:hidden;
+	// position: relative;
+	margin-top: 10px;
+}
+.arxaimg{
+	height:430px;
+}
+.arxaimg1{
+	background-image:url("img1/bg1.png");
+	transition:ease all 1s;
+}
+.arxaimg2{
+	background-image:url("img1/bg2.png");
+	transition:ease all 1.3s;
+}
+.arxaimg3{
+	background-image:url("img1/bg3.png");
+	transition:ease all 1.5s;
+}
+
+.arxaimg1 , .arxaimg2, .arxaimg3{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:8220px; /*1370*6*/
+	height:430px;
+	position: absolute;
+
+	// transition:ease all 0.5s;
+	// background-repeat:repeat;
+	// background-position:top left;
+	// background-color:transparent;
+
+}
+
+#orta ul{
+	
+	list-style:none;
+}
+.bigImg{
+	width: inherit;
+	transition:ease all 1.5s;
+}
+#obsiySlide{
+	width: 8190px;
+}
+
+.bigImg li {
+	width: 1365px;
+	height:430px;
+	position:relative;
+	float: left;
+	text-align: center;
+	
+
+}
+
+.bigImg li img{
+	
+	
+	margin:35px auto 0px auto;
+	box-shadow:0px 0px 7px #222;
+	border: 8px solid transparent;
+	border-radius:5px;
+}
+
+.next{
+	float: right;
+	background: #000;
+	width: 35px;
+    height: 60px;
+    box-shadow: 0px 0px 2px #000;
+    top: 145px;
+    opacity: 0.6;
+    border-radius: 4px;
+    position: absolute;
+    right: 330px;
+  
+}
+
+.back{
+	background: #000;
+	width: 35px;
+    height: 60px;
+    box-shadow: 0px 0px 2px #000;
+    top: 145px;
+    opacity: 0.6;
+    border-radius: 4px;
+    position: absolute;
+    left: 330px;
+
+}
+
+// .active{
+// 	left:0;
+// }
+
+.kicikSlider{
+	height:35px;
+	position:absolute;
+	top:320px;
+	left:27%;
+}
+.kicikSlider li {
+	
+	float: left;
+}
+
+.kicikSlider li .bir, .uc , .bes {
+	margin-left:10px; 
+	border: 5px solid #FFFFFF;
+	box-shadow:1px 1px 7px #555;
+	cursor:pointer;
+	
+}
+.kicikSlider li .iki ,.dord , .alti{
+	margin-left:10px; 
+	border: 5px solid #FFFFFF;
+	box-shadow:1px 1px 7px #555;
+	cursor:pointer;
+	transform: rotate(10deg);
+	
+}
+
+.active{
+	opacity:0.5;
+}
+
+#son{
+	text-align:center;
+	width:100%;
+	padding:20px 0px;
+	clear:both;
+	margin-top:30px;
+}
+#son a{
+	margin:0px 20px;
+	color: #555;
+	font-size: 20px;
+	text-shadow: 1px 1px 1px  #333;
+}

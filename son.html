@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+<script   src="https://code.jquery.com/jquery-3.1.1.js"   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="   crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+ <link rel="stylesheet" type="text/css" href="son.css">
+</head>
+<body>
+<section class="container-fluid" style="padding:0; margin:0;">
+	<div class="row">
+		<div id="basliq" class="col-md-12">
+			<h1>Parallax Slider Demo</h1>
+			<p>Create some depth with the parallax effect</p>
+		</div>
+<div id="orta" class="col-md-12">
+	<div class="arxaimg">
+				<div class="arxaimg1"></div>
+				<div class="arxaimg2"></div>
+				<div class="arxaimg3"></div>
+
+		<div id="obsiySlide">
+			<ul class="bigImg">
+				<li><img src="img1/1.jpg"></li>
+				<li ><img src="img1/2.jpg"></li>
+				<li><img src="img1/3.jpg"></li>
+				<li><img src="img1/4.jpg"></li>
+				<li><img src="img1/5.jpg"></li>
+				<li><img src="img1/6.jpg"></li>
+			</ul>
+
+		<div class="buttonlar">
+				<button class="next">
+					<i class="fa fa-chevron-right" aria-hidden="true"></i>
+				</button>
+				<button class="back">
+					<i class="fa fa-chevron-left" aria-hidden="true"></i>
+				</button>
+		</div>
+			<ul class="kicikSlider">
+				<li><img  class="bir" src="img1/balaca/1.jpg"></li>
+				<li><img class="iki" src="img1/balaca/2.jpg"></li>
+				<li><img class="uc" src="img1/balaca/3.jpg"></li>
+				<li><img class="dord" src="img1/balaca/4.jpg"></li>
+				<li><img class="bes" src="img1/balaca/5.jpg"></li>
+				<li><img class="alti" src="img1/balaca/6.jpg"></li>
+			</ul> 
+
+		</div>	
+
+	</div>
+</div>
+
+		<div id="son" class="col-md-12">
+			<a href="http://tympanus.net/codrops/2011/01/03/parallax-slider/"> Back to the Codrops tutorial</a>
+			<a href="https://www.flickr.com/photos/tetsumo/" target="_blank">Images by talented Tetsumo</a>
+		</div>
+
+	</div>
+
+
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		var nese=1;
+		var a = 0;
+		if(a==0) {
+						$('img').removeClass('active');
+    					$('.bir').addClass("active"); 
+
+    
+    };
+			$('.next').click(function() {
+				a -=1365;
+				$(' .arxaimg1').css('transform', 'translate3d('+a+'px,0,0)')
+				$(' .arxaimg2').css('transform', 'translate3d('+a+'px,0,0)')
+				$(' .arxaimg3').css('transform', 'translate3d('+a+'px,0,0)')
+				$('.bigImg').css('transform', 'translate3d('+a+'px,0,0)')
+						nese++;
+	
+	if(a==-1365) {
+						$('img').removeClass('active');
+    					$('.iki').addClass("active"); 
+
+    
+    };
+    if(a==-2730) {
+						$('img').removeClass('active');
+    					$('.uc').addClass("active"); 
+
+    
+    };
+    if(a==-4095) {
+						$('img').removeClass('active');
+    					$('.dord').addClass("active"); 
+
+    
+    };
+    if(a==-5460) {
+						$('img').removeClass('active');
+    					$('.bes').addClass("active"); 
+
+    
+    };
+     if(a==-6825) {
+						$('img').removeClass('active');
+    					$('.alti').addClass("active"); 
+
+    
+    };
+
+
+
+
+						if(nese>$(".bigImg li").length){
+							a = 0;
+							nese=1;
+	if(a==0) {
+						$('img').removeClass('active');
+    					$('.bir').addClass("active"); 
+
+    
+    };
+							$('.bigImg').css('transform', 'translate3d('+a+'px,0,0)')
+							$(' .arxaimg1').css('transform', 'translate3d('+a+'px,0,0)')
+							$(' .arxaimg2').css('transform', 'translate3d('+a+'px,0,0)')
+							$(' .arxaimg3').css('transform', 'translate3d('+a+'px,0,0)')
+						}
+				});
+			
+
+
+$('.back').click(function() {
+				a +=1365;
+				$(' .arxaimg1').css('transform', 'translate3d('+a+'px,0,0)')
+				$(' .arxaimg2').css('transform', 'translate3d('+a+'px,0,0)')
+				$(' .arxaimg3').css('transform', 'translate3d('+a+'px,0,0)')
+				$('.bigImg').css('transform', 'translate3d('+a+'px,0,0)')
+						nese--;
+	if(a==-1365) {
+						$('img').removeClass('active');
+    					$('.iki').addClass("active"); 
+
+    
+    };
+if(a==-2730) {
+						$('img').removeClass('active');
+    					$('.uc').addClass("active"); 
+
+    
+    };
+    if(a==-4095) {
+						$('img').removeClass('active');
+    					$('.dord').addClass("active"); 
+
+    
+    };
+    if(a==-5460) {
+						$('img').removeClass('active');
+    					$('.bes').addClass("active"); 
+
+    
+    };
+     if(a==-6825) {
+						$('img').removeClass('active');
+    					$('.alti').addClass("active"); 
+
+    
+    };
+
+
+
+						if(nese==0){
+							a = -6825;
+							nese=$(".bigImg li").length;
+							$('.bigImg').css('transform', 'translate3d('+a+'px,0,0)')
+							$(' .arxaimg1').css('transform', 'translate3d('+a+'px,0,0)')
+							$(' .arxaimg2').css('transform', 'translate3d('+a+'px,0,0)')
+							$(' .arxaimg3').css('transform', 'translate3d('+a+'px,0,0)')
+						}
+				});
+			
+
+
+
+		
+	});
+
+</script>
+
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+	$(".bir").click(function() {
+		a=0;
+		if(a==0) {
+						$('img').removeClass('active');
+    					$('.bir').addClass("active"); 
+
+    
+    };
+		$(' .arxaimg1').css('transform', 'translate3d('+a+'px,0,0)')
+				$(' .arxaimg2').css('transform', 'translate3d('+a+'px,0,0)')
+				$(' .arxaimg3').css('transform', 'translate3d('+a+'px,0,0)')
+				$('.bigImg').css('transform', 'translate3d('+a+'px,0,0)')
+	});
+$(".iki").click(function() {
+	b=-1365;
+	if(b==-1365) {
+						$('img').removeClass('active');
+    					$('.iki').addClass("active"); 
+
+    
+    };
+		$(' .arxaimg1').css('transform', 'translate3d('+b+'px,0,0)')
+				$(' .arxaimg2').css('transform', 'translate3d('+b+'px,0,0)')
+				$(' .arxaimg3').css('transform', 'translate3d('+b+'px,0,0)')
+				$('.bigImg').css('transform', 'translate3d('+b+'px,0,0)')
+	});
+$(".uc").click(function() {
+	c=-2730;
+	if(c==-2730) {
+						$('img').removeClass('active');
+    					$('.uc').addClass("active"); 
+
+    
+    };
+		$(' .arxaimg1').css('transform', 'translate3d('+c+'px,0,0)')
+				$(' .arxaimg2').css('transform', 'translate3d('+c+'px,0,0)')
+				$(' .arxaimg3').css('transform', 'translate3d('+c+'px,0,0)')
+				$('.bigImg').css('transform', 'translate3d('+c+'px,0,0)')
+	});
+$(".dord").click(function() {
+	d=-4095;
+	if(d==-4095) {
+						$('img').removeClass('active');
+    					$('.dord').addClass("active"); 
+
+    
+    };
+		$(' .arxaimg1').css('transform', 'translate3d('+d+'px,0,0)')
+				$(' .arxaimg2').css('transform', 'translate3d('+d+'px,0,0)')
+				$(' .arxaimg3').css('transform', 'translate3d('+d+'px,0,0)')
+				$('.bigImg').css('transform', 'translate3d('+d+'px,0,0)')
+	});
+$(".bes").click(function() {
+	f=-5460;
+	if(f==-5460) {
+						$('img').removeClass('active');
+    					$('.bes').addClass("active"); 
+
+    
+    };
+		$(' .arxaimg1').css('transform', 'translate3d('+f+'px,0,0)')
+				$(' .arxaimg2').css('transform', 'translate3d('+f+'px,0,0)')
+				$(' .arxaimg3').css('transform', 'translate3d('+f+'px,0,0)')
+				$('.bigImg').css('transform', 'translate3d('+f+'px,0,0)')
+	});
+$(".alti").click(function() {
+	e=-6825;
+	if(e==-6825) {
+						$('img').removeClass('active');
+    					$('.alti').addClass("active"); 
+
+    
+    };
+		$(' .arxaimg1').css('transform', 'translate3d('+e+'px,0,0)')
+				$(' .arxaimg2').css('transform', 'translate3d('+e+'px,0,0)')
+				$(' .arxaimg3').css('transform', 'translate3d('+e+'px,0,0)')
+				$('.bigImg').css('transform', 'translate3d('+e+'px,0,0)')
+	});
+
+});
+	
+	
+
+</script>
+
+
+
+</body>
+</html>
